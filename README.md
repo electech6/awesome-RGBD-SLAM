@@ -1,6 +1,8 @@
 # Visual_SLAM_Collection
 Visual SLAM open sources，good papers，famous research institutions
-# 1. RGB-D SLAM
+[TOC]
+
+# RGB-D SLAM
 
 ## 背景介绍
 
@@ -23,6 +25,8 @@ KinectFusion之后，陆续出现了Kintinuous，ElasticFusion，InfiniTAM，Bun
 [代码](https://github.com/niessner/BundleFusion)
 
 [算法详细解读](https://mp.weixin.qq.com/s?__biz=MzIxOTczOTM4NA==&mid=2247485487&idx=1&sn=068e04d652578deb55e93b1a32fa9a21&chksm=97d7edb8a0a064ae265e9beb0f337f36fd3470a14ce97701cb16710608e0f1899c3d03b196ff&scene=21#wechat_redirect)
+
+![bundlefusion](C:\Users\cxl5766\Desktop\bundlefusion.gif)
 
 ### 算法流程
 
@@ -50,4 +54,59 @@ Bundle fusion算法具体流程图如下：
    2.  上述效果图片都是在作者提供的公开数据集上的效果，该数据集采集的场景纹理比较丰富，光照也比较适中。而实际重建时效果和所使用深度相机的性能、待重建场景的纹理丰富程度关系很大。对于办公室这种简洁风格的场景效果会下降很多，还有很多可改进的地方。
    3.  目前算法需要两块GPU才能实时运行。
 
+# InfiniTAM
+
+## 基本信息
+
+[官网](http://www.robots.ox.ac.uk/~victor/infinitam/)
+
+[代码](https://github.com/victorprad/InfiniTAM)
+
+![InfiniTAM](C:\Users\cxl5766\Desktop\InfiniTAM.gif)
+
+# ORBSLAM V2
+
+## 基本信息
+
+[代码](https://github.com/raulmur/ORB_SLAM2)
+
+[论文（RGB-D）](https://128.84.21.199/pdf/1610.06475.pdf)
+
+![ORBSLAM2](C:\Users\cxl5766\Desktop\ORBSLAM2.gif)
+
+# RTAB-Map
+
+## 基本信息
+
+[官网](http://introlab.github.io/rtabmap/)
+
+[代码](https://github.com/introlab/rtabmap)
+
+![RTAB-MAP](C:\Users\cxl5766\Desktop\RTAB-MAP.gif)
+
+# Kintinuous
+
+[代码](https://github.com/mp3guy/Kintinuous)
+
+[论文](http://thomaswhelan.ie/Whelan14ijrr.pdf)
+
+![Kintinuous](C:\Users\cxl5766\Desktop\Kintinuous.gif)
+
+# ElasticFusion
+
+[代码](https://github.com/mp3guy/ElasticFusion)
+
+[论文](http://www.thomaswhelan.ie/Whelan16ijrr.pdf)
+
+![ElasticFusion](C:\Users\cxl5766\Desktop\ElasticFusion.gif)
+
+# rgbdslam_v2
+
+[代码](https://github.com/felixendres/rgbdslam_v2)
+
+[论文](http://www2.informatik.uni-freiburg.de/~endres/files/publications/felix-endres-phd-thesis.pdf)
+
+![RGBDSLAMV2](C:\Users\cxl5766\Desktop\RGBDSLAMV2.png)
+
+持续更新。。。
 
