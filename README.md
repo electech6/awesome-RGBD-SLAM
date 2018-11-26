@@ -104,7 +104,7 @@ Bundle fusion算法具体流程图如下：
 
 [论文](http://www2.informatik.uni-freiburg.de/~endres/files/publications/felix-endres-phd-thesis.pdf)
 
-![RGBDSLAMV2](C:\Users\cxl5766\Desktop\RGBDSLAMV2.png)
+![RGBDSLAMV2](https://github.com/electech6/Visual_SLAM_Collection/blob/master/RGBDSLAMV2.png)
 
 持续更新。。。
 
