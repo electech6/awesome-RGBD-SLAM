@@ -26,7 +26,7 @@ KinectFusion之后，陆续出现了Kintinuous，ElasticFusion，InfiniTAM，Bun
 
 [算法详细解读](https://mp.weixin.qq.com/s?__biz=MzIxOTczOTM4NA==&mid=2247485487&idx=1&sn=068e04d652578deb55e93b1a32fa9a21&chksm=97d7edb8a0a064ae265e9beb0f337f36fd3470a14ce97701cb16710608e0f1899c3d03b196ff&scene=21#wechat_redirect)
 
-![bundlefusion](https://github.com/electech6/Visual_SLAM_Collection/blob/master\bundlefusion.gif)
+![bundlefusion](https://github.com/electech6/Visual_SLAM_Collection/blob/master/bundlefusion.gif)
 
 ### 算法流程
 
