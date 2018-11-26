@@ -26,7 +26,7 @@ KinectFusion之后，陆续出现了Kintinuous，ElasticFusion，InfiniTAM，Bun
 
 [算法详细解读](https://mp.weixin.qq.com/s?__biz=MzIxOTczOTM4NA==&mid=2247485487&idx=1&sn=068e04d652578deb55e93b1a32fa9a21&chksm=97d7edb8a0a064ae265e9beb0f337f36fd3470a14ce97701cb16710608e0f1899c3d03b196ff&scene=21#wechat_redirect)
 
-![bundlefusion](C:\Users\cxl5766\Desktop\bundlefusion.gif)
+![bundlefusion](https://github.com/electech6/Visual_SLAM_Collection/blob/master\bundlefusion.gif)
 
 ### 算法流程
 
@@ -60,7 +60,7 @@ Bundle fusion算法具体流程图如下：
 
 [代码](https://github.com/victorprad/InfiniTAM)
 
-![InfiniTAM](C:\Users\cxl5766\Desktop\InfiniTAM.gif)
+![InfiniTAM](https://github.com/electech6/Visual_SLAM_Collection/blob/master/InfiniTAM.gif)
 
 # ORBSLAM V2
 
@@ -70,7 +70,7 @@ Bundle fusion算法具体流程图如下：
 
 [论文（RGB-D）](https://128.84.21.199/pdf/1610.06475.pdf)
 
-![ORBSLAM2](C:\Users\cxl5766\Desktop\ORBSLAM2.gif)
+![ORBSLAM2](https://github.com/electech6/Visual_SLAM_Collection/blob/master/ORBSLAM2.gif)
 
 # RTAB-Map
 
@@ -80,7 +80,7 @@ Bundle fusion算法具体流程图如下：
 
 [代码](https://github.com/introlab/rtabmap)
 
-![RTAB-MAP](C:\Users\cxl5766\Desktop\RTAB-MAP.gif)
+![RTAB-MAP](https://github.com/electech6/Visual_SLAM_Collection/blob/master/RTAB-MAP.gif)
 
 # Kintinuous
 
@@ -88,7 +88,7 @@ Bundle fusion算法具体流程图如下：
 
 [论文](http://thomaswhelan.ie/Whelan14ijrr.pdf)
 
-![Kintinuous](C:\Users\cxl5766\Desktop\Kintinuous.gif)
+![Kintinuous](https://github.com/electech6/Visual_SLAM_Collection/blob/master/Kintinuous.gif)
 
 # ElasticFusion
 
@@ -96,7 +96,7 @@ Bundle fusion算法具体流程图如下：
 
 [论文](http://www.thomaswhelan.ie/Whelan16ijrr.pdf)
 
-![ElasticFusion](C:\Users\cxl5766\Desktop\ElasticFusion.gif)
+![ElasticFusion](https://github.com/electech6/Visual_SLAM_Collection/blob/master/ElasticFusion.gif)
 
 # rgbdslam_v2
 
