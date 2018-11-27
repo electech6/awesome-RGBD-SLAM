@@ -1,6 +1,8 @@
 # RGB-D_SLAM_Collection
 RGB-D SLAM open sources，good papers，famous research institutions
 
+[TOC]
+
 ## 背景介绍
 
 RGB-D SLAM主要用于稠密三维重建。
@@ -11,7 +13,7 @@ RGB-D SLAM主要用于稠密三维重建。
 
 KinectFusion之后，陆续出现了Kintinuous，ElasticFusion，InfiniTAM，BundleFusion等非常优秀的工作。其中2017年斯坦福大学提出的BundleFusion算法，可以说是目前基于RGB-D相机进行稠密三维重建效果最好的方法了。
 
-## Bundle fusion
+# Bundle fusion
 
 ### 基本信息
 
@@ -23,7 +25,9 @@ KinectFusion之后，陆续出现了Kintinuous，ElasticFusion，InfiniTAM，Bun
 
 [算法详细解读](https://mp.weixin.qq.com/s?__biz=MzIxOTczOTM4NA==&mid=2247485487&idx=1&sn=068e04d652578deb55e93b1a32fa9a21&chksm=97d7edb8a0a064ae265e9beb0f337f36fd3470a14ce97701cb16710608e0f1899c3d03b196ff&scene=21#wechat_redirect)
 
-![bundlefusion](https://github.com/electech6/Visual_SLAM_Collection/blob/master/bundlefusion.gif)
+![bundlefusion.gif](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/bundlefusion.gif?raw=true)
+
+
 
 ### 算法流程
 
@@ -57,7 +61,9 @@ Bundle fusion算法具体流程图如下：
 
 [代码](https://github.com/victorprad/InfiniTAM)
 
-![InfiniTAM](https://github.com/electech6/Visual_SLAM_Collection/blob/master/InfiniTAM.gif)
+![InfiniTAM.gif](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/InfiniTAM.gif?raw=true)
+
+
 
 # ORBSLAM V2
 
@@ -67,7 +73,7 @@ Bundle fusion算法具体流程图如下：
 
 [论文（RGB-D）](https://128.84.21.199/pdf/1610.06475.pdf)
 
-![ORBSLAM2](https://github.com/electech6/Visual_SLAM_Collection/blob/master/ORBSLAM2.gif)
+![ORBSLAM2.gif](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/ORBSLAM2.gif?raw=true)
 
 # RTAB-Map
 
@@ -77,7 +83,7 @@ Bundle fusion算法具体流程图如下：
 
 [代码](https://github.com/introlab/rtabmap)
 
-![RTAB-MAP](https://github.com/electech6/Visual_SLAM_Collection/blob/master/RTAB-MAP.gif)
+![RTAB-MAP.gif](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/RTAB-MAP.gif?raw=true)
 
 # Kintinuous
 
@@ -85,7 +91,7 @@ Bundle fusion算法具体流程图如下：
 
 [论文](http://thomaswhelan.ie/Whelan14ijrr.pdf)
 
-![Kintinuous](https://github.com/electech6/Visual_SLAM_Collection/blob/master/Kintinuous.gif)
+![Kintinuous.gif](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/Kintinuous.gif?raw=true)
 
 # ElasticFusion
 
@@ -93,7 +99,7 @@ Bundle fusion算法具体流程图如下：
 
 [论文](http://www.thomaswhelan.ie/Whelan16ijrr.pdf)
 
-![ElasticFusion](https://github.com/electech6/Visual_SLAM_Collection/blob/master/ElasticFusion.gif)
+![ElasticFusion.gif](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/ElasticFusion.gif?raw=true)
 
 # rgbdslam_v2
 
@@ -101,7 +107,7 @@ Bundle fusion算法具体流程图如下：
 
 [论文](http://www2.informatik.uni-freiburg.de/~endres/files/publications/felix-endres-phd-thesis.pdf)
 
-![RGBDSLAMV2](https://github.com/electech6/Visual_SLAM_Collection/blob/master/RGBDSLAMV2.png)
+![RGBDSLAMV2.png](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/RGBDSLAMV2.png?raw=true)
 
 持续更新。。。
 
