@@ -1,8 +1,5 @@
-# Visual_SLAM_Collection
-Visual SLAM open sources，good papers，famous research institutions
-
-
-# RGB-D SLAM
+# RGB-D_SLAM_Collection
+RGB-D SLAM open sources，good papers，famous research institutions
 
 ## 背景介绍
 
