@@ -159,6 +159,13 @@ ORB-SLAM2 在 ORB-SLAM 的基础上，还支持标定后的双目相机和 RGB-D
 - 不用GPU无法实时
 - 点云网格化用possion重建，不是主流的TSDF，速度会慢
 - 重建效果不如 bundle fusion，但是也还不错
+# SLAMRecon
+
+[官网](http://irc.cs.sdu.edu.cn/SLAMRecon/)
+
+[代码](https://github.com/HaoLi-China/SLAMRecon)
+
+![SLAMRecon.gif](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/SLAMRecon.gif?raw=true)
 
 # Kintinuous
 
