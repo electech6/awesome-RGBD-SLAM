@@ -1,5 +1,5 @@
 # RGB-D_SLAM_Collection
-RGB-D SLAM open sources，good papers，famous research institutions
+RGB-D SLAM open sources
 
 [TOC]
 
@@ -149,7 +149,7 @@ ORB-SLAM2 在 ORB-SLAM 的基础上，还支持标定后的双目相机和 RGB-D
 
 ## 简介
 
-RTAB-Map（ R**eal-**T**ime **A**ppearance-**B**ased **Mapping）用于基于外观的实时建图， 是一个通过内存管理方法实现回环检测的开源库。它限制地图的大小以使得回环检测始终在固定的时间限制内处理，从而满足长期和大规模环境在线建图要求。 
+RTAB-Map（ **R**eal-**T**ime **A**ppearance-**B**ased **M**apping）用于基于外观的实时建图， 是一个通过内存管理方法实现回环检测的开源库。它限制地图的大小以使得回环检测始终在固定的时间限制内处理，从而满足长期和大规模环境在线建图要求。 
 
 从2013年开始并于2013年作为开源库发布，RTAB-Map已经扩展到完整的基于图的SLAM方法，目前RTAB-Map已经发展成为一个跨平台的独立C ++库和一个ROS包，允许用户使用不同的机器人和传感器实现和比较各种3D和2D对于各种应用的解决方案。
 
