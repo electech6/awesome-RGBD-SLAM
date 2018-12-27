@@ -94,10 +94,10 @@ ORB-SLAM 是西班牙 Zaragoza 大学研究者开发的视觉 SLAM 系统。 它
 
 ORB-SLAM 基本延续了 PTAM 的算法框架,但对框架中的大部分组件都做了改进, 归纳起来主要有 4 点:
 
-1.  ORB-SLAM 选用了 ORB 特征, 基于 ORB 描述量的特征匹配和重定位, 都比 PTAM 具有更好的视角不变性。此外, 新增三维点的特征匹配效率更高, 因此能更及时地扩展场景。扩展场景及时与否决定了后续帧是否能稳定跟踪。
-2.  ORBSLAM 加入了循环回路的检测和闭合机制, 以消除误差累积。系统采用与重定位相同的方法来检测回路(匹配回路两侧关键帧上的公共点), 通过方位图 (Pose Graph) 优化来闭合回路。
-3.  PTAM 需要用户指定 2 帧来初始化系统, 2 帧间既要有足够的公共点, 又要有足够的平移量. 平移运动为这些公共点提供视差 (Parallax) , 只有足够的视差才能三角化出精确的三维位置。ORB-SLAM 通过检测视差来自动选择初始化的 2 帧。
-4.  PTAM 扩展场景时也要求新加入的关键帧提供足够的视差, 导致场景往往难以扩展. ORB-SLAM 采用一种更鲁棒的关键帧和三维点的选择机制——先用宽松的判断条件尽可能及时地加入新的关键帧和三维点, 以保证后续帧的鲁棒跟踪; 再用严格的判断条件删除冗余的关键帧和不稳定的三维点，以保证 BA 的效率和精度。
+1. ORB-SLAM 选用了 ORB 特征, 基于 ORB 描述量的特征匹配和重定位, 都比 PTAM 具有更好的视角不变性。此外, 新增三维点的特征匹配效率更高, 因此能更及时地扩展场景。扩展场景及时与否决定了后续帧是否能稳定跟踪。
+2. ORBSLAM 加入了循环回路的检测和闭合机制, 以消除误差累积。系统采用与重定位相同的方法来检测回路(匹配回路两侧关键帧上的公共点), 通过方位图 (Pose Graph) 优化来闭合回路。
+3. PTAM 需要用户指定 2 帧来初始化系统, 2 帧间既要有足够的公共点, 又要有足够的平移量. 平移运动为这些公共点提供视差 (Parallax) , 只有足够的视差才能三角化出精确的三维位置。ORB-SLAM 通过检测视差来自动选择初始化的 2 帧。
+4. PTAM 扩展场景时也要求新加入的关键帧提供足够的视差, 导致场景往往难以扩展. ORB-SLAM 采用一种更鲁棒的关键帧和三维点的选择机制——先用宽松的判断条件尽可能及时地加入新的关键帧和三维点, 以保证后续帧的鲁棒跟踪; 再用严格的判断条件删除冗余的关键帧和不稳定的三维点，以保证 BA 的效率和精度。
 
 ORB-SLAM2 在 ORB-SLAM 的基础上，还支持标定后的双目相机和 RGB-D 相机。双目对于精度和鲁棒性都会有一定的提升。ORB-SLAM2 是基于单目，双目和 RGB-D 相机的一套完整的 SLAM 方案。它能够实现地图重用，回环检测和重新定位的功能。无论是在室内的小型手持设备，还是到工厂环境的无人机和城市里驾驶的汽车，ORB-SLAM2 都能够在标准的 CPU 上进行实时工作。ORB-SLAM2 在后端上采用的是基于单目和双目的光束法平差优化（BA）的方式，这个方法允许米制比例尺的轨迹精确度评估。此外，ORB-SLAM2 包含一个轻量级的定位模式，该模式能够在允许零点漂移的条件下，利用视觉里程计来追踪未建图的区域并且匹配特征点。
 
@@ -107,7 +107,7 @@ ORB-SLAM2 在 ORB-SLAM 的基础上，还支持标定后的双目相机和 RGB-D
 
  它是由三大块、三个流程同时运行的。第一块是跟踪，第二块是建图，第三块是闭环检测。
 
-1.  跟踪（Tracking）
+1. 跟踪（Tracking）
 
 这一部分主要工作是从图像中提取 ORB 特征，根据上一帧进行姿态估计，或者进行通过全局重定位初始化位姿，然后跟踪已经重建的局部地图，优化位姿，再根据一些规则确定新关键帧。
 
@@ -147,18 +147,65 @@ ORB-SLAM2 在 ORB-SLAM 的基础上，还支持标定后的双目相机和 RGB-D
 
 ![RTAB-MAP.gif](https://github.com/electech6/RGB-D-SLAM-Collection/blob/master/RTAB-MAP.gif?raw=true)
 
+## 简介
+
+RTAB-Map（ R**eal-**T**ime **A**ppearance-**B**ased **Mapping）用于基于外观的实时建图， 是一个通过内存管理方法实现回环检测的开源库。它限制地图的大小以使得回环检测始终在固定的时间限制内处理，从而满足长期和大规模环境在线建图要求。 
+
+从2013年开始并于2013年作为开源库发布，RTAB-Map已经扩展到完整的基于图的SLAM方法，目前RTAB-Map已经发展成为一个跨平台的独立C ++库和一个ROS包，允许用户使用不同的机器人和传感器实现和比较各种3D和2D对于各种应用的解决方案。
+
+[本文](https://mp.weixin.qq.com/s?__biz=MzI5MTM1MTQwMw==&mid=2247502325&idx=1&sn=724e23271a82a74797efbbe60e9b4a55&chksm=ec1377f1db64fee769ce9c8087c2149979bc64260a511ba2f6bb4f5fb8ea54cf4e2f350e36c9&scene=0#rd)介绍了RTAB-Map的扩展版本及其在大量流行的真实数据集进行定量和定性的比较，（例如KITTI, EuRoC, TUM RGB-D, MIT Stata Center）。从自主导航应用的实用角度概述视觉和激光雷达SLAM配置的优势和局限性。
+
+## 算法流程
+
+### 1、RTAB-Map 整体描述
+
+![img](https://mmbiz.qpic.cn/mmbiz_png/O60Uib8kfuuibDPu9MVgkf9licGJQSnU2Z6OuS4WmbZybFwzVVkJ0ae1DmpvbMB0CruF8EUOlr9eWwGW8uleXTIhg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+*RTAB-Map ROS节点的框图。所需输入是：TF，用于定义传感器相对于机器人底座的位置; 来自任何来源的里程计（可以是3DoF或6DoF）; 其中一种相机输入（一个或多个RGB-D图像，或双目立体图像），且带有相应的校准消息。可选输入：2D激光的雷达扫描，或3D激光的点云。然后，来自这些输入的所有消息被同步并传递给graph-SLAM算法。输出的是：Map Data，包含最新添加的节点（带有压缩传感器数据）和Graph; Map Graph，没有任何数据的纯图;TF，矫正过的里程计; 可选的OctoMap（3D占用栅格地图）; 可选的稠密点云地图; 可选的2D占用栅格地图。*
+
+### 2、视觉里程计
+
+![img](https://mmbiz.qpic.cn/mmbiz_png/O60Uib8kfuuibDPu9MVgkf9licGJQSnU2Z63d1Jx55OlaicFPPXvUibtPtuicSEJ0m7qhIibKWRKQ0OKlmVXrbEAjgThg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+*RGBD里程计和双目立体视里程计的ROS节点框图。TF定义相机相对于机器人基座的位置，并作为输出来发布机器人基座的里程计变换。对于RGB-D相机或立体相机，管道是相同的，除了多计算一步相应的立体深度信息，以便稍后确定检测到的特征的深度。可以有两种里程计的方法：绿色的帧到帧（F2F）方法，红色的帧到地图（F2M）方法。*
+
+
+
+### 3、激光里程计
+
+![img](https://mmbiz.qpic.cn/mmbiz_png/O60Uib8kfuuibDPu9MVgkf9licGJQSnU2Z6wQ5v5kt8KNqFKqy2plicMLGtwUnC2dv7fFsibUntwmeFDePseibUAC3jA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+*ICP里程计ROS节点框图。TF定义激光雷达相对于机器人基座的位置，并作为输出以发布机器人基座的里程计变换。可以有两种里程计的方法：绿色的扫描到扫描（S2S）方法，红色的扫描到地图（S2M）方法。 这些方法还可以选择使用恒速模型（粉红色）或其他里程计（蓝色）进行运动预测。 对于后者，输入测距的校正发布在TF上。*
+
+
+
+### 4、局部地图
+
+![img](https://mmbiz.qpic.cn/mmbiz_png/O60Uib8kfuuibDPu9MVgkf9licGJQSnU2Z6A6R5mCibs9NLHFiaiaU6RuVDibXW3HH7JAwB0MoOwGdLQjkpcUfdrmWFwA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+*STM的局部占用栅格地图创建。 依赖的参数（由椭圆显示），可选用激光扫描和点云输入（由棱形显示），局部占用栅格地图可以是2D或3D。*
+
+### 5、全局地图。
+
+![img](https://mmbiz.qpic.cn/mmbiz_png/O60Uib8kfuuibDPu9MVgkf9licGJQSnU2Z6hBFZVnP9zm0lIoibRWOxDJflplD9mvYEJS6rFgL771aXt3iaic2oxILBw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+*全局地图集成。依赖于局部地图创建地图的类型（见上图）。当只有3D局部占用栅格地图可用于生成3D占用栅格地图（OctoMap）及其2D地图。*
+
 ## 算法优缺点
 
 ### 优点
 
 - 定位精度很准
+- 支持视觉、激光传感器
+- 支持跨平台、ROS
+- 在线处理
 
 ### 缺点
 
 - 鲁棒性不是很好，如果建图时间和重定位时间间隔得比较久，或者光线变化都很明显的话，重定位会失败
-- 不用GPU无法实时
 - 点云网格化用possion重建，不是主流的TSDF，速度会慢
 - 重建效果不如 bundle fusion，但是也还不错
+
 # SLAMRecon
 
 [官网](http://irc.cs.sdu.edu.cn/SLAMRecon/)
